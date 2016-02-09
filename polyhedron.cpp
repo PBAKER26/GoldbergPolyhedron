@@ -210,18 +210,6 @@ void Polyhedron::initPolyhedron(int _m, int _n) {
 			}
 			if (origin->neighbour.size() == origin->neighbours) break;
 		}
-		//this loop is VERY slow
-		/*for (vSize = points.size() - 1; vSize > 0; vSize--) {
-			origin = &points[vSize];
-			tempSet.clear();
-			for (unsigned i = 0; i < vSize; i++) tempSet.insert( points[i] );		//orders every point by distance to origin
-			it = tempSet.end();
-			for (unsigned i = points[vSize].neighbour.size(); i < points[vSize].neighbours; i++) {
-			it--;
-			points[vSize].neighbour.push_back(it->original);
-			it->original->neighbour.push_back(&points[vSize]);
-			}
-		} */
 
 		vSize = points.size();
 		vecNeighbour.clear();
